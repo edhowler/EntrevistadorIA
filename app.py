@@ -1,12 +1,9 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from langchain_anthropic import ChatAnthropic
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-# Carrega as variáveis de ambiente
-load_dotenv()
 
 # Configura o cliente Anthropic com LangChain
 llm = ChatAnthropic(model="claude-3-sonnet-20240229", anthropic_api_key=os.getenv("ANTHROPIC_API_KEY"))
